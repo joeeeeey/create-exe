@@ -1,19 +1,29 @@
-# 在 MacOS 上使用 win 虚拟机开发 GUI exe
+# Develop Windows GUI exe file at MacOS.
 
 ### In MacOS
 
-编写 python 文件
+1. setup env
 
-MacOS 调试
+```bash
+virtualenv -p python3 .env
+source .env/bin/activate
+touch read-file.py
+```
 
-    python read-file.py
-    # 会出现 GUI
+Write python file as `read-file`...
+
+2. MacOS debug
+
+```bash
+python read-file.py
+# Will show GUI
+```
 
 ### In windows
 
 1. Install python3 at [here](https://www.python.org/downloads/windows/).
 2. Open power shell.
-3. cd 到 [read-file.py](http://read-file.py) 共享的文件夹(此处不设置共享文件在 powershell 中也能进入)
-4. `pip install pyinstaller`
-5. `pyinstaller --onefile read-file.py`
-6. 在 dist 文件夹中找到 .exe 文件
+3. cd the share folder of read-file.py (In fact, powershell can go to folder although it's not shared.)
+4. Run `pip install pyinstaller`
+5. Run `pyinstaller --onefile read-file.py` to pack exe.
+6. Find `.exe` file at `dist/`

@@ -1,0 +1,6 @@
+dist/*
+build/*
+.env/*
+setup.py
+.vscode/*
+.DS_Store
